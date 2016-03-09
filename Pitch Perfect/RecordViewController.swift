@@ -199,6 +199,9 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
             }
         } else {
             setup()
+            let ac = UIAlertController(title: "Error", message: "An error occurred with the recording.", preferredStyle: .Alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+            presentViewController(ac, animated: true, completion: nil)
         }
     }
     
